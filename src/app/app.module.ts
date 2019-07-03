@@ -8,10 +8,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   exports: [
     MaterialModule

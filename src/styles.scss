@@ -1,1 +1,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "style-constants.scss";
+
+html, body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: $bgGray;
+}
+
+body {
+  margin: 0;
+}
