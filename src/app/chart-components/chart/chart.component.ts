@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import 'chartjs-plugin-datalabels';
+import {ChartService} from '../../shared/services/chart/chart.service';
 import { Chart } from 'chart.js';
-import {ChartService} from '../shared/services/chart/chart.service';
 
 @Component({
   selector: 'app-chart',
@@ -18,10 +19,18 @@ export class ChartComponent implements OnInit, AfterViewInit {
   constructor(private chartService: ChartService) { }
 
   ngOnInit() {
+    Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 1)';
+    Chart.defaults.global.defaultFontFamily = 'Montserrat';
   }
 
   ngAfterViewInit(): void {
-    this.chart = new Chart(this.chartRef.nativeElement, this.chartService.createChartConfig(this.dataset, this.labelset, this.colorset, this.colorset2));
+    this.chart = new Chart(this.chartRef.nativeElement,
+      this.chartService.createChartConfig(
+        this.dataset,
+        this.labelset,
+        this.colorset,
+        this.colorset2
+      ));
   }
 
 }

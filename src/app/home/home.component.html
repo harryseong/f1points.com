@@ -1,11 +1,15 @@
-<div fxLayout="row" fxLayout.sm="column" fxLayoutGap="1em">
+<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="1em" fxLayoutAlign="space-between">
 
-  <div fxFlex="50">
+  <div fxFlex="48">
     <app-driver-standings *ngIf="apiService.driverStandings$ | async"></app-driver-standings>
   </div>
 
-  <div fxFlex="50">
+  <div fxFlex="48">
     <app-constructor-standings *ngIf="apiService.constructorStandings$ | async"></app-constructor-standings>
+  </div>
+
+  <div fxFlex="48">
+    <app-driver-age *ngIf="apiService.driverStandings$ | async"></app-driver-age>
   </div>
 
 </div>

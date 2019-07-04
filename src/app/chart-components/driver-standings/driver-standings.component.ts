@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from '../shared/services/api/api.service';
-import {CONSTRUCTOR_COLORS_2019} from '../shared/constants/constructor-colors/constructor-colors-19';
+import {ApiService} from '../../shared/services/api/api.service';
+import {TEAM_COLORS_19} from '../../shared/constants/constructor-colors/constructor-colors';
 
 @Component({
   selector: 'app-driver-standings',
@@ -20,8 +20,8 @@ export class DriverStandingsComponent implements OnInit {
       rsp.forEach(d => {
         this.dataset.push(d.points);
         this.labelset.push(d.Driver.givenName + ' ' + d.Driver.familyName);
-        this.colorset.push(CONSTRUCTOR_COLORS_2019[d.Constructors[0].constructorId].color);
-        this.colorset2.push(CONSTRUCTOR_COLORS_2019[d.Constructors[0].constructorId].color2);
+        this.colorset.push(TEAM_COLORS_19[d.Constructors[0].constructorId].color);
+        this.colorset2.push(TEAM_COLORS_19[d.Constructors[0].constructorId].color2);
       });
     });
   }

@@ -1,4 +1,4 @@
-export const CONSTRUCTOR_COLORS_2019 = {
+export const TEAM_COLORS_19 = {
   mercedes: { color: '#00D2BE', color2: '#00d2be55' },
   ferrari: { color: '#dc0000', color2: '#dc000055' },
   red_bull: { color: '#1e41ff', color2: '#1e41ff55' },

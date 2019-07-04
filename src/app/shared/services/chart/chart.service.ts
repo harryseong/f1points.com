@@ -7,7 +7,7 @@ export class ChartService {
 
   constructor() { }
 
-  createChartConfig(dataset, labelset, colorset, colorset2) {
+  createChartConfig(dataset, labelset, colorset, colorset2): any {
     return {
       type: 'horizontalBar',
       data: {
@@ -30,7 +30,7 @@ export class ChartService {
           datalabels: {
             color: '#ffffff',
             font: {
-              weight: '700'
+              weight: '600'
             }
           }
         },
@@ -54,8 +54,11 @@ export class ChartService {
                 display: true,
                 labelString: 'Points'
               },
+              ticks: {
+                beginAtZero: true
+              },
               gridLines: {
-                color: '#ffffff20'
+                color: '#ffffff10'
               }
             }
           ],
@@ -68,7 +71,7 @@ export class ChartService {
                 beginAtZero: true
               },
               gridLines: {
-                color: '#ffffff20'
+                color: '#ffffff10'
               }
             }
           ]

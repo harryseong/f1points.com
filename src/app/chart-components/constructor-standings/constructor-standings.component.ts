@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from '../shared/services/api/api.service';
-import {CONSTRUCTOR_COLORS_2019} from '../shared/constants/constructor-colors/constructor-colors-19';
+import {ApiService} from '../../shared/services/api/api.service';
+import {TEAM_COLORS_19} from '../../shared/constants/constructor-colors/constructor-colors';
 
 @Component({
   selector: 'app-constructor-standings',
@@ -20,8 +20,8 @@ export class ConstructorStandingsComponent implements OnInit {
       rsp.forEach(c => {
         this.dataset.push(c.points);
         this.labelset.push(c.Constructor.name);
-        this.colorset.push(CONSTRUCTOR_COLORS_2019[c.Constructor.constructorId].color);
-        this.colorset2.push(CONSTRUCTOR_COLORS_2019[c.Constructor.constructorId].color2);
+        this.colorset.push(TEAM_COLORS_19[c.Constructor.constructorId].color);
+        this.colorset2.push(TEAM_COLORS_19[c.Constructor.constructorId].color2);
       });
     });
   }
