@@ -1,0 +1,20 @@
+.leader-header {
+  padding: 10px;
+
+  .leader-photo {
+    margin: 5px;
+    width: 75px;
+    border-radius: 50%;
+  }
+
+  .leader-info {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+
+    .leader-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

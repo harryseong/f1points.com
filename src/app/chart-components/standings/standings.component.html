@@ -1,0 +1,14 @@
+<div class="standings-div">
+  <div class="standings-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>STANDINGS</div>
+
+    <div fxLayout="row" fxLayoutGap="5px">
+      <button mat-stroked-button (click)="showDrivers()" [ngClass]="standingType == 'driver' ? 'selected' : null">Driver</button>
+      <button mat-stroked-button (click)="showConstructors()" [ngClass]="standingType == 'constructor' ? 'selected' : null">Constructor</button>
+    </div>
+  </div>
+
+  <app-driver-standings *ngIf="standingType=='driver'"></app-driver-standings>
+
+  <app-constructor-standings *ngIf="standingType=='constructor'"></app-constructor-standings>
+</div>

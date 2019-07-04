@@ -15,6 +15,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   @Input() labelset;
   @Input() colorset;
   @Input() colorset2;
+  @Input() datatype;
 
   constructor(private chartService: ChartService) { }
 
@@ -29,7 +30,8 @@ export class ChartComponent implements OnInit, AfterViewInit {
         this.dataset,
         this.labelset,
         this.colorset,
-        this.colorset2
+        this.colorset2,
+        this.datatype
       ));
   }
 

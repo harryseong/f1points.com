@@ -1,3 +1,16 @@
-<div class="chart-title">Driver Standings</div>
+<div fxLayout="column">
 
-<app-chart [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2"></app-chart>
+  <div class="leader-header" *ngIf="leader$ | async as leader" fxLayout="row">
+    <img class="leader-photo mat-elevation-z4" [src]="'/assets/drivers/' + leader.Driver.driverId + '.jpg'" alt="driver_photo">
+
+    <div class="leader-info">
+      <div class="leader-name">{{leader.Driver.givenName + ' ' + leader.Driver.familyName}}</div>
+      <div class="leader-team-name">{{leader.Constructors[0].name}}</div>
+      <div>{{leader.points}} points</div>
+    </div>
+  </div>
+
+  <app-chart [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2" [datatype]="datatype"></app-chart>
+
+</div>
+

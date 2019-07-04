@@ -7,14 +7,14 @@ export class ChartService {
 
   constructor() { }
 
-  createChartConfig(dataset, labelset, colorset, colorset2): any {
+  createChartConfig(dataset, labelset, colorset, colorset2, datatype): any {
     return {
       type: 'horizontalBar',
       data: {
         labels: labelset,
         datasets: [
           {
-            label: 'Points',
+            label: datatype,
             data: dataset,
             backgroundColor: colorset2,
             borderColor: colorset,
@@ -30,13 +30,13 @@ export class ChartService {
           datalabels: {
             color: '#ffffff',
             font: {
-              weight: '600'
+              weight: '500'
             }
           }
         },
         title: {
           display: false,
-          text: 'Constructor Standings',
+          text: '',
           fontSize: 14
         },
         legend: {
@@ -51,8 +51,8 @@ export class ChartService {
           xAxes: [
             {
               scaleLabel: {
-                display: true,
-                labelString: 'Points'
+                display: false,
+                labelString: datatype
               },
               ticks: {
                 beginAtZero: true

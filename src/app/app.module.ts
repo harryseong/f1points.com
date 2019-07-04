@@ -20,6 +20,7 @@ import {ChartService} from './shared/services/chart/chart.service';
 import { DriverStandingsComponent } from './chart-components/driver-standings/driver-standings.component';
 import { ConstructorStandingsComponent } from './chart-components/constructor-standings/constructor-standings.component';
 import { DriverAgeComponent } from './chart-components/driver-age/driver-age.component';
+import { StandingsComponent } from './chart-components/standings/standings.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DriverAgeComponent } from './chart-components/driver-age/driver-age.com
     DriverComponent,
     DriverStandingsComponent,
     ConstructorStandingsComponent,
-    DriverAgeComponent
+    DriverAgeComponent,
+    StandingsComponent
   ],
   exports: [
     MaterialModule

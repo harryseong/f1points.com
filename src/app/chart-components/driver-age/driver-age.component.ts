@@ -13,6 +13,7 @@ export class DriverAgeComponent implements OnInit {
   labelset: any[] = [];
   colorset: any[] = [];
   colorset2: any[] = [];
+  datatype = 'Age';
 
   constructor(private apiService: ApiService) {}
 

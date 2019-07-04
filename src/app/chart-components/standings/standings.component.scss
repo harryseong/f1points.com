@@ -1,0 +1,18 @@
+@import '../../../style-constants';
+
+.standings-div {
+  .standings-header {
+    border-radius: 0 10px 0 0;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+
+    .selected {
+      background-color: rgba(220, 220, 220, 0.9);
+    }
+  }
+
+  margin: 10px;
+  background-color: $bgGray;
+}
