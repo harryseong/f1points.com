@@ -1,3 +1,6 @@
 <mat-toolbar class="mat-elevation-z1">
-  F1Points.com
+  <button mat-button [routerLink]="['/']">F1Points.com</button>
+  <span class="spacer"></span>
+  <button mat-stroked-button [routerLink]="['driversStandings']">Drivers Standings</button>
+  <button mat-stroked-button [routerLink]="['constructorsStandings']">Constructors Standings</button>
 </mat-toolbar>

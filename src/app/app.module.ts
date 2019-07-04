@@ -9,11 +9,28 @@ import {HttpClientModule} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavComponent } from './nav/nav.component';
+import { ChartComponent } from './chart/chart.component';
+import { HomeComponent } from './home/home.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamComponent } from './team/team.component';
+import { DriverComponent } from './driver/driver.component';
+import {ApiService} from './shared/services/api/api.service';
+import {ChartService} from './shared/services/chart/chart.service';
+import { DriverStandingsComponent } from './driver-standings/driver-standings.component';
+import { ConstructorStandingsComponent } from './constructor-standings/constructor-standings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    ChartComponent,
+    HomeComponent,
+    TeamsComponent,
+    TeamComponent,
+    DriverComponent,
+    DriverStandingsComponent,
+    ConstructorStandingsComponent
   ],
   exports: [
     MaterialModule
@@ -24,9 +41,13 @@ import { NavComponent } from './nav/nav.component';
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
+    FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    ChartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayout.sm="column" fxLayoutGap="1em">
+
+  <div fxFlex="50">
+    <app-driver-standings *ngIf="apiService.driverStandings$ | async"></app-driver-standings>
+  </div>
+
+  <div fxFlex="50">
+    <app-constructor-standings *ngIf="apiService.constructorStandings$ | async"></app-constructor-standings>
+  </div>
+
+</div>

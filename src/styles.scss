@@ -5,8 +5,13 @@ html, body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: $bgGray;
+  color: white;
 }
 
 body {
   margin: 0;
+}
+
+.spacer {
+  flex: auto 1 1;
 }

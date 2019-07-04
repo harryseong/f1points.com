@@ -1,4 +1,6 @@
+@import "../../style-constants.scss";
+
 mat-toolbar {
-  color: white;
-  background-color: red;
+  color: black;
+  background-color: $candyAppleRed;
 }
