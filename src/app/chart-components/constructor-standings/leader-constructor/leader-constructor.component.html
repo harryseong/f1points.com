@@ -1,8 +1,22 @@
-<div>
-  <img class="leader-logo mat-elevation-z4" [src]="'/assets/teams/' + leader.Constructor.constructorId + '.jpg'" alt="leader_logo">
+<div fxLayout="row" class="leader-div" fxLayoutAlign="start center" [ngClass]="leader.Constructor.constructorId">
+  <div class="leader-position" fxLayout="row" fxLayoutAlign="center center">{{leader.position}}</div>
 
-  <div class="leader-info">
-    <div class="leader-name">{{leader.Constructor.name}}</div>
-    <div>{{leader.points}} points</div>
+  <img class="leader-logo mat-elevation-z2" [src]="'/assets/teams/' + leader.Constructor.constructorId + '.jpg'" alt="team_photo">
+
+  <div class="leader-info" fxFlex="1 1 auto">
+    <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+      <div class="leader-name">{{leader.Constructor.name}}</div>
+      <img class="leader-nationality" [src]="countryFlagsUrl + '/' + nationCodes[leader.Constructor.nationality] + '/flat/64.png'" alt="nationality_flag">
+    </div>
+
+    <div>
+      <span class="stat">{{leader.wins}}</span>
+      <span class="stat-label">{{(leader.wins > 1 || leader.wins == 0) ? 'wins' : 'win'}}</span>
+    </div>
+    <div>
+      <span class="stat">{{leader.points}}</span>
+      <span class="stat-label">points</span>
+    </div>
   </div>
 </div>
+
