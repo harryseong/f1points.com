@@ -1,8 +1,18 @@
-<mat-toolbar class="mat-elevation-z1">
-  <button mat-button [routerLink]="['/']">F1Points.com</button>
-  <div fxLayout="row" fxLayoutGap="0.5em">
+<mat-toolbar class="mat-elevation-z1" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="space-between center">
 
-    <section *ngIf="apiService.constructorStandings$ | async as standings">
+  <button mat-icon-button fxHide.gt-xs>
+    <span><i class="fas fa-bars fa-lg"></i></span>
+  </button>
+
+  <button mat-button [routerLink]="['/']">F1Points.com</button>
+
+  <button mat-icon-button fxHide.gt-xs>
+    <span><i class="fas fa-bars fa-lg"></i></span>
+  </button>
+
+  <div fxLayout="row" fxLayoutGap="0.5em" fxHide.xs>
+
+    <section *ngIf="apiService.constructorStandings$ | async as standings" fxHide.xs>
       <button mat-button [matMenuTriggerFor]="teamsMenu">
         <span>TEAMS <i class="fas fa-caret-down fa-md"></i></span>
       </button>
@@ -36,7 +46,5 @@
       <button mat-menu-item [routerLink]="['standings', 'constructor']">Constructor</button>
     </mat-menu>
   </div>
-
-  <span class="spacer"></span>
 
 </mat-toolbar>

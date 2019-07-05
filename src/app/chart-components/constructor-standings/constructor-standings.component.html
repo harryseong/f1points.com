@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutGap="20px" *ngIf="(apiService.constructorStandings$ | async) && isLoading==false" [@contentAnimations]>
   <div class="page-header stagger">Constructor Standings</div>
 
-  <div class="leader-header" *ngIf="leaders$ | async as leaders" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+  <div class="leader-header" *ngIf="leaders$ | async as leaders" fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-md="column" fxLayoutGap="10px">
     <app-leader-constructor class="stagger" *ngFor="let leader of leaders" [leader]="leader"></app-leader-constructor>
   </div>
 
