@@ -1,0 +1,50 @@
+<mat-toolbar class="mat-elevation-z1" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="space-between center">
+
+  <button mat-icon-button fxHide.gt-xs>
+    <span><i class="fas fa-bars fa-lg"></i></span>
+  </button>
+
+  <button mat-button [routerLink]="['/']">F1Points.com</button>
+
+  <button mat-icon-button fxHide.gt-xs>
+    <span><i class="fas fa-bars fa-lg"></i></span>
+  </button>
+
+  <div fxLayout="row" fxLayoutGap="0.5em" fxHide.xs>
+
+    <section *ngIf="apiService.constructorStandings$ | async as standings" fxHide.xs>
+      <button mat-button [matMenuTriggerFor]="teamsMenu">
+        <span>TEAMS <i class="fas fa-caret-down fa-md"></i></span>
+      </button>
+      <mat-menu #teamsMenu="matMenu">
+        <button mat-menu-item *ngFor="let standing of standings" class="mat-menu-item" [ngClass]="standing.Constructor.constructorId"
+                [routerLink]="['constructor', standing.Constructor.constructorId]" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+          <img class="team-logo mat-elevation-z2" [src]="'/assets/teams/' + standing.Constructor.constructorId + '.jpg'" alt="team_photo">
+          <span>{{standing.Constructor.name}}</span>
+        </button>
+      </mat-menu>
+    </section>
+
+    <section *ngIf="apiService.driverStandings$ | async as standings">
+      <button mat-button [matMenuTriggerFor]="driversMenu">
+        <span>DRIVERS <i class="fas fa-caret-down fa-md"></i></span>
+      </button>
+      <mat-menu #driversMenu="matMenu">
+        <button mat-menu-item *ngFor="let standing of standings" class="mat-menu-item" [ngClass]="standing.Constructors[0].constructorId"
+                [routerLink]="['driver', standing.Driver.driverId]" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+          <img class="driver-photo mat-elevation-z2" [src]="'/assets/drivers/' + standing.Driver.driverId + '.jpg'" alt="driver_photo">
+          <span>{{standing.Driver.givenName + ' ' + standing.Driver.familyName}}</span>
+        </button>
+      </mat-menu>
+    </section>
+
+    <button mat-button [matMenuTriggerFor]="standingsMenu">
+      <span>STANDINGS <i class="fas fa-caret-down fa-md"></i></span>
+    </button>
+    <mat-menu #standingsMenu="matMenu">
+      <button mat-menu-item [routerLink]="['standings', 'driver']">Driver</button>
+      <button mat-menu-item [routerLink]="['standings', 'constructor']">Constructor</button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>

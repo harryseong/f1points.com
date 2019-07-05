@@ -8,7 +8,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NavComponent } from './nav/nav.component';
 import { ChartComponent } from './chart-components/chart/chart.component';
 import { HomeComponent } from './home/home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -24,11 +23,14 @@ import { StandingsComponent } from './chart-components/standings/standings.compo
 import { LeaderDriverComponent } from './chart-components/driver-standings/leader-driver/leader-driver.component';
 import { LeaderConstructorComponent } from './chart-components/constructor-standings/leader-constructor/leader-constructor.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     ChartComponent,
     HomeComponent,
     TeamsComponent,
@@ -40,7 +42,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
     StandingsComponent,
     LeaderDriverComponent,
     LeaderConstructorComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    NavComponent,
   ],
   exports: [
     MaterialModule
@@ -52,7 +55,13 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     ApiService,

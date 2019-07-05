@@ -1,24 +1,8 @@
-@import "~src/style-constants";
+@import "../../style-constants.scss";
 
-.sidenav-container {
-  height: 100%;
-}
-
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  color: $bgBlack;
+mat-toolbar {
+  color: black;
   background-color: $bgWhite;
-}
-
-.mat-toolbar {
-  color: $bgBlack;
-  background-color: $bgWhite;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 .mat-menu-item {
@@ -42,14 +26,6 @@
   border-radius: 2px;
   height: 35px;
   width: auto;
-}
-
-.content {
-  margin: 20px;
-}
-
-.content.mobile {
-  margin: 10px;
 }
 
 .mercedes {

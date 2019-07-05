@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import {ApiService} from '../shared/services/api/api.service';
 
 @Component({
@@ -6,11 +9,14 @@ import {ApiService} from '../shared/services/api/api.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
 
-  constructor(public apiService: ApiService) { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
 
-  ngOnInit() {
-  }
+  constructor(private breakpointObserver: BreakpointObserver,
+              public apiService: ApiService) {}
 
 }
