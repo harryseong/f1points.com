@@ -1,0 +1,23 @@
+<div fxLayout="row" class="leader-div" fxLayoutAlign="start center" [ngClass]="leader.Constructors[0].constructorId">
+  <div class="leader-position" fxLayout="row" fxLayoutAlign="center center">{{leader.position}}</div>
+
+  <img class="leader-photo mat-elevation-z2" [src]="'/assets/drivers/' + leader.Driver.driverId + '.jpg'" alt="driver_photo">
+
+  <div class="leader-info">
+    <div class="leader-name">{{leader.Driver.givenName + ' ' + leader.Driver.familyName}}</div>
+    <div class="leader-team-name" [ngClass]="leader.Constructors[0].constructorId">{{leader.Constructors[0].name}}</div>
+    <div>
+      <span class="stat">{{leader.wins}}</span>
+      <span class="stat-label">{{leader.wins > 1 && leader.wins != 0 ? 'wins' : 'win'}}</span>
+    </div>
+    <div>
+      <span class="stat">{{leader.points}}</span>
+      <span class="stat-label">points</span>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px" class="leader-number-nationality">
+    <div class="leader-number">{{leader.Driver.permanentNumber}}</div>
+    <img class="leader-nationality" [src]="countryFlagsUrl + '/' + nationCodes[leader.Driver.nationality] + '/flat/64.png'" alt="nationality_flag">
+  </div>
+</div>

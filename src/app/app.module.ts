@@ -21,6 +21,9 @@ import { DriverStandingsComponent } from './chart-components/driver-standings/dr
 import { ConstructorStandingsComponent } from './chart-components/constructor-standings/constructor-standings.component';
 import { DriverAgeComponent } from './chart-components/driver-age/driver-age.component';
 import { StandingsComponent } from './chart-components/standings/standings.component';
+import { LeaderDriverComponent } from './chart-components/driver-standings/leader-driver/leader-driver.component';
+import { LeaderConstructorComponent } from './chart-components/constructor-standings/leader-constructor/leader-constructor.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { StandingsComponent } from './chart-components/standings/standings.compo
     DriverStandingsComponent,
     ConstructorStandingsComponent,
     DriverAgeComponent,
-    StandingsComponent
+    StandingsComponent,
+    LeaderDriverComponent,
+    LeaderConstructorComponent,
+    ProgressSpinnerComponent
   ],
   exports: [
     MaterialModule

@@ -1,4 +1,4 @@
-export const nationCodes = {
+export const NATION_CODES = {
   American: 'us',
   Australian: 'au',
   Austrian: 'at',

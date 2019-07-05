@@ -1,13 +1,11 @@
-<div fxLayout="column">
+<div fxLayout="column" fxLayoutGap="20px" *ngIf="(apiService.constructorStandings$ | async) && isLoading==false" [@contentAnimations]>
+  <div class="page-header stagger">Constructor Standings</div>
 
-  <div class="leader-header" *ngIf="leader$ | async as leader" fxLayout="row">
-    <img class="leader-logo mat-elevation-z4" [src]="'/assets/teams/' + leader.Constructor.constructorId + '.jpg'" alt="leader_logo">
-
-    <div class="leader-info">
-      <div class="leader-name">{{leader.Constructor.name}}</div>
-      <div>{{leader.points}} points</div>
-    </div>
+  <div class="leader-header" *ngIf="leaders$ | async as leaders" fxLayout="row">
+    <app-leader-constructor class="stagger" *ngFor="let leader of leaders" [leader]="leader"></app-leader-constructor>
   </div>
 
-  <app-chart [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2" [datatype]="datatype"></app-chart>
+  <app-chart class="stagger" [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2" [datatype]="datatype"></app-chart>
 </div>
+
+<app-progress-spinner *ngIf="isLoading==true"></app-progress-spinner>

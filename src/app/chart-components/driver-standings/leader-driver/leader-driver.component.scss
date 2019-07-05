@@ -1,0 +1,164 @@
+@import "../../../../style-constants";
+
+.leader-div {
+  border: 1pt solid;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  min-width: 300px;
+  position: relative;
+  transition: 0.2s;
+
+  .leader-position {
+    width: 20px;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 0 5px;
+  }
+
+  .leader-photo {
+    margin: 5px 2px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .leader-info {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+
+    .leader-name {
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .leader-team-name {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .stat {
+      font-weight: 600;
+      margin-right: 3px;
+    }
+
+    .stat-label {
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .leader-number-nationality {
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    right: 0;
+
+    .leader-number {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .leader-nationality {
+      height: 20px;
+    }
+  }
+}
+
+.leader-div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.leader-team-name.mercedes {
+  color: $mercedes;
+}
+.leader-team-name.ferrari {
+  color: $ferrari;
+}
+.leader-team-name.red_bull {
+  color: $red_bull;
+}
+.leader-team-name.mclaren {
+  color: $mclaren;
+}
+.leader-team-name.renault {
+  color: $renault;
+}
+.leader-team-name.racing_point {
+  color: $racing_point;
+}
+.leader-team-name.toro_rosso {
+  color: $toro_rosso;
+}
+.leader-team-name.haas {
+  color: $haas;
+}
+.leader-team-name.alfa {
+  color: $alfa;
+}
+.leader-team-name.williams {
+  color: $williams;
+}
+
+.leader-div.mercedes {
+  border-color: $mercedes2;
+}
+.leader-div.ferrari {
+  border-color: $ferrari2;
+}
+.leader-div.red_bull {
+  border-color: $red_bull2;
+}
+.leader-div.mclaren {
+  border-color: $mclaren2;
+}
+.leader-div.renault {
+  border-color: $renault2;
+}
+.leader-div.racing_point {
+  border-color: $racing_point2;
+}
+.leader-div.toro_rosso {
+  border-color: $toro_rosso2;
+}
+.leader-div.haas {
+  border-color: $haas2;
+}
+.leader-div.alfa {
+  border-color: $alfa2;
+}
+.leader-div.williams {
+  border-color: $williams2;
+}
+.leader-div.mercedes:hover {
+  border-color: $mercedes;
+}
+.leader-div.ferrari:hover {
+  border-color: $ferrari;
+}
+.leader-div.red_bull:hover {
+  border-color: $red_bull;
+}
+.leader-div.mclaren:hover {
+  border-color: $mclaren;
+}
+.leader-div.renault:hover {
+  border-color: $renault;
+}
+.leader-div.racing_point:hover {
+  border-color: $racing_point;
+}
+.leader-div.toro_rosso:hover {
+  border-color: $toro_rosso;
+}
+.leader-div.haas:hover {
+  border-color: $haas;
+}
+.leader-div.alfa:hover {
+  border-color: $alfa;
+}
+.leader-div.williams:hover {
+  border-color: $williams;
+}

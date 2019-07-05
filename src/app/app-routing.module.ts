@@ -6,8 +6,10 @@ import {DriverStandingsComponent} from './chart-components/driver-standings/driv
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'driversStandings', component: DriverStandingsComponent},
-  {path: 'constructorsStandings', component: ConstructorStandingsComponent},
+  {path: 'standings', children: [
+      {path: 'driver', component: DriverStandingsComponent},
+      {path: 'constructor', component: ConstructorStandingsComponent},
+    ]},
 ];
 
 @NgModule({

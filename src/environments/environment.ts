@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api: {
-    ergast: 'http://ergast.com/api/f1',
+    ergast: 'https://ergast.com/api/f1',
     countryflags: 'https://www.countryflags.io'
   }
 };
