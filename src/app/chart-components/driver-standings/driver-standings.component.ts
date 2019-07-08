@@ -26,6 +26,7 @@ export class DriverStandingsComponent implements OnInit {
   labelset: any[] = [];
   colorset: any[] = [];
   colorset2: any[] = [];
+  chartTitle = 'Driver Standings';
   datatype = 'Points';
   leaders$: BehaviorSubject<any> = new BehaviorSubject(null);
   isLoading = true;

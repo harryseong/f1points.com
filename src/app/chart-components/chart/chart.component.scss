@@ -1,3 +1,14 @@
+@import "../../../style-constants";
+
+.chart-title {
+  color: $bgBlack;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .chart-div {
-  padding: 10px;
+  background-color: $bgWhite;
+  padding: 20px;
+  border-radius: 2px;
+  border-left: solid #f596c8 2pt;
 }

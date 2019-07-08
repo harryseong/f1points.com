@@ -1,1 +1,5 @@
-<p>teams works!</p>
+<div fxLayout="row wrap" fxLayout.xs="column" *ngIf="teams$ | async as teams">
+
+  <app-team *ngFor="let teamId of teamIds" [team]="teams[teamId]" fxFlex="50" fxFlex.xs="100"></app-team>
+
+</div>

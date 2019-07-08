@@ -1,3 +1,7 @@
-<div class="chart-div">
-  <canvas height="350" #chart>{{chart}}</canvas>
+<div fxLayout="column" fxLayoutGap="20px" class="chart-div">
+  <div class="chart-title">{{chartTitle}}</div>
+
+  <div>
+    <canvas height="300" #chart>{{chart}}</canvas>
+  </div>
 </div>

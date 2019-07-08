@@ -1,12 +1,12 @@
 <div fxLayout="column" fxLayoutGap="20px" *ngIf="(apiService.driverStandings$ | async) && isLoading==false" [@contentAnimations]>
   <div class="page-header stagger">Driver Standings</div>
 
-  <div class="leader-header" *ngIf="leaders$ | async as leaders" fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <app-leader-driver class="stagger" *ngFor="let leader of leaders" [leader]="leader"></app-leader-driver>
+  <div class="leader-header" *ngIf="leaders$ | async as leaders" fxLayout="row" fxLayoutGap="10px" fxLayout.lt-md="column" fxLayoutAlign="center center">
+    <app-leader-driver class="stagger" *ngFor="let leader of leaders" [leader]="leader" [fxFlex]="100/3" [fxFlex.sm]="100" [fxFlex.xs]="100"></app-leader-driver>
   </div>
 
-  <app-chart class="stagger" [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2" [datatype]="datatype"></app-chart>
-
+  <app-chart class="stagger" [dataset]="dataset" [labelset]="labelset" [colorset]="colorset" [colorset2]="colorset2"
+             [chartTitle]="chartTitle" [datatype]="datatype"></app-chart>
 </div>
 
 <app-progress-spinner *ngIf="isLoading==true"></app-progress-spinner>

@@ -7,26 +7,12 @@
 <!--    <mat-toolbar></mat-toolbar>-->
     <mat-nav-list>
       <a mat-list-item [routerLink]="['home']"><i class="fas fa-home fa-fw"></i> Home</a>
-      <a mat-list-item [matMenuTriggerFor]="teamsMenu" *ngIf="apiService.constructorStandings$ | async as standings">
-        <span><i class="fas fa-warehouse fa-fw"></i> Teams <i class="fas fa-caret-down fa-fw"></i></span>
-        <mat-menu #teamsMenu="matMenu">
-          <button mat-menu-item *ngFor="let standing of standings" class="mat-menu-item" [ngClass]="standing.Constructor.constructorId"
-                  [routerLink]="['team', standing.Constructor.constructorId]" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
-            <img class="team-logo mat-elevation-z2" [src]="'/assets/teams/' + standing.Constructor.constructorId + '.jpg'" alt="team_photo">
-            <span>{{standing.Constructor.name}}</span>
-          </button>
-        </mat-menu>
+      <a mat-list-item [routerLink]="['teams']">
+        <span><i class="fas fa-warehouse fa-fw"></i> Teams</span>
       </a>
 
-      <a mat-list-item [matMenuTriggerFor]="driversMenu" *ngIf="apiService.driverStandings$ | async as standings">
-        <span><i class="fas fa-users fa-fw"></i> Drivers <i class="fas fa-caret-down fa-fw"></i></span>
-        <mat-menu #driversMenu="matMenu">
-          <button mat-menu-item *ngFor="let standing of standings" class="mat-menu-item" [ngClass]="standing.Constructors[0].constructorId"
-                  [routerLink]="['driver', standing.Driver.driverId]" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
-            <img class="driver-photo mat-elevation-z2" [src]="'/assets/drivers/' + standing.Driver.driverId + '.jpg'" alt="driver_photo">
-            <span>{{standing.Driver.givenName + ' ' + standing.Driver.familyName}}</span>
-          </button>
-        </mat-menu>
+      <a mat-list-item [routerLink]="['drivers']">
+        <span><i class="fas fa-users fa-fw"></i> Drivers</span>
       </a>
 
       <a mat-list-item [matMenuTriggerFor]="standingsMenu">
@@ -36,7 +22,6 @@
           <button mat-menu-item [routerLink]="['standings', 'constructor']">Constructor</button>
         </mat-menu>
       </a>
-
 
     </mat-nav-list>
   </mat-sidenav>

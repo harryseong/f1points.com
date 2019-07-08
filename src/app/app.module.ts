@@ -12,8 +12,8 @@ import { ChartComponent } from './chart-components/chart/chart.component';
 import { HomeComponent } from './home/home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { TeamsComponent } from './teams/teams.component';
-import { TeamComponent } from './team/team.component';
-import { DriverComponent } from './driver/driver.component';
+import { TeamComponent } from './teams/team/team.component';
+import { DriverComponent } from './drivers/driver/driver.component';
 import {ApiService} from './shared/services/api/api.service';
 import {ChartService} from './shared/services/chart/chart.service';
 import { DriverStandingsComponent } from './chart-components/driver-standings/driver-standings.component';
@@ -23,10 +23,10 @@ import { StandingsComponent } from './chart-components/standings/standings.compo
 import { LeaderDriverComponent } from './chart-components/driver-standings/leader-driver/leader-driver.component';
 import { LeaderConstructorComponent } from './chart-components/constructor-standings/leader-constructor/leader-constructor.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { DriversComponent } from './drivers/drivers.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +44,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     LeaderConstructorComponent,
     ProgressSpinnerComponent,
     NavComponent,
+    DriversComponent,
   ],
   exports: [
     MaterialModule

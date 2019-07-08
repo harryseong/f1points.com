@@ -1,0 +1,129 @@
+@import "../../../style-constants";
+
+.team-div {
+  margin: 5px;
+  border-left: 3pt solid;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $bgBlack;
+  min-width: 300px;
+  max-width: 100vw;
+  padding: 0 5px;
+  position: relative;
+  transition: 0.2s;
+
+  .team-logo {
+    margin: 5px 2px;
+    width: 125px;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .team-info {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+
+    .team-name {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .team-nationality {
+      height: 38px;
+    }
+
+    .stat {
+      font-weight: 600;
+      margin-right: 3px;
+    }
+
+    .stat-label {
+      font-weight: 300;
+      color: $bgBlack;
+    }
+  }
+}
+
+.driver-button {
+  width: 200px;
+  padding: 3px 10px;
+
+  .driver-photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .driver-name {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.team-div:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.team-div.mercedes {
+  border-color: $mercedes2;
+}
+.team-div.ferrari {
+  border-color: $ferrari2;
+}
+.team-div.red_bull {
+  border-color: $red_bull2;
+}
+.team-div.mclaren {
+  border-color: $mclaren2;
+}
+.team-div.renault {
+  border-color: $renault2;
+}
+.team-div.racing_point {
+  border-color: $racing_point2;
+}
+.team-div.toro_rosso {
+  border-color: $toro_rosso2;
+}
+.team-div.haas {
+  border-color: $haas2;
+}
+.team-div.alfa {
+  border-color: $alfa2;
+}
+.team-div.williams {
+  border-color: $williams2;
+}
+.team-div.mercedes:hover {
+  border-color: $mercedes;
+}
+.team-div.ferrari:hover {
+  border-color: $ferrari;
+}
+.team-div.red_bull:hover {
+  border-color: $red_bull;
+}
+.team-div.mclaren:hover {
+  border-color: $mclaren;
+}
+.team-div.renault:hover {
+  border-color: $renault;
+}
+.team-div.racing_point:hover {
+  border-color: $racing_point;
+}
+.team-div.toro_rosso:hover {
+  border-color: $toro_rosso;
+}
+.team-div.haas:hover {
+  border-color: $haas;
+}
+.team-div.alfa:hover {
+  border-color: $alfa;
+}
+.team-div.williams:hover {
+  border-color: $williams;
+}

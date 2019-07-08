@@ -26,6 +26,7 @@ export class ConstructorStandingsComponent implements OnInit {
   labelset: any[] = [];
   colorset: any[] = [];
   colorset2: any[] = [];
+  chartTitle = 'Constructor Standings';
   datatype = 'Points';
   leaders$: BehaviorSubject<any> = new BehaviorSubject([]);
   isLoading = true;

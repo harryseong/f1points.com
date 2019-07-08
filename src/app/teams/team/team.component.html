@@ -1,0 +1,29 @@
+<div class="team-div" [ngClass]="team.team.constructorId" fxLayout="column" fxLayoutGap="10px">
+
+  <div fxLayout="row" fxLayoutGap="3px" fxLayoutAlign="start start">
+    <img class="team-logo mat-elevation-z1" [src]="'/assets/teams/' + team.team.constructorId + '.jpg'" alt="team_photo">
+
+    <div class="team-info" fxFlex="1 1 auto">
+      <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start start">
+        <div class="team-name">{{team.team.name}}</div>
+        <img class="team-nationality" [src]="countryFlagsUrl + '/' + nationCodes[team.team.nationality] + '/flat/64.png'" alt="nationality_flag">
+      </div>
+    </div>
+  </div>
+
+
+  <div fxLayout="column" fxLayoutGap="10px">
+
+    <div *ngFor="let driver of team.drivers">
+
+      <button mat-button class="driver-button">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px">
+          <img class="driver-photo" [src]="'assets/drivers/' + driver.driverId + '.jpg'" alt="driver_photo">
+          <div class="driver-name">{{driver.givenName + ' ' + driver.familyName}}</div>
+        </div>
+      </button>
+
+    </div>
+  </div>
+
+</div>

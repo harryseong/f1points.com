@@ -11,6 +11,7 @@ import { Chart } from 'chart.js';
 export class ChartComponent implements OnInit, AfterViewInit {
   @ViewChild('chart', {static: false}) private chartRef;
   chart: any;
+  @Input() chartTitle;
   @Input() dataset;
   @Input() labelset;
   @Input() colorset;
@@ -20,7 +21,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   constructor(private chartService: ChartService) { }
 
   ngOnInit() {
-    Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 1)';
+    Chart.defaults.global.defaultFontColor = 'rgb(0,0,0)';
     Chart.defaults.global.defaultFontFamily = 'Montserrat';
   }
 

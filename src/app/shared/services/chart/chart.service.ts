@@ -28,7 +28,7 @@ export class ChartService {
         maintainAspectRatio: false,
         plugins: {
           datalabels: {
-            color: '#ffffff',
+            color: '#000000',
             font: {
               weight: '500'
             }
@@ -58,7 +58,7 @@ export class ChartService {
                 beginAtZero: true
               },
               gridLines: {
-                color: '#ffffff10'
+                color: '#00000010'
               }
             }
           ],
@@ -71,7 +71,7 @@ export class ChartService {
                 beginAtZero: true
               },
               gridLines: {
-                color: '#ffffff10'
+                color: '#00000010'
               }
             }
           ]
